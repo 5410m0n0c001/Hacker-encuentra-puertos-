@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>H4CK3R PORT GUESSER</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="terminal-header">
+            root@anonymous:~# ./port_scanner.sh
+        </div>
+        
+        <h1 id="title">H4CK3R PORT GUESSER</h1>
+        
+        <div class="stats">
+            <div class="stat">Intentos: <span id="intentos">1</span></div>
+            <div class="stat">Servicios encontrados: <span id="serviciosEncontrados">0</span></div>
+            <div class="stat">Puertos restantes: <span id="puertosRestantes">10</span></div>
+        </div>
+        
+        <div id="serviceInfo" class="service-info">
+            <div class="service-name">Iniciando escaneo de puertos...</div>
+            <div>Preparando sistema de detección de servicios...</div>
+            <div class="hint">💡 Pista: Los puertos van del 1 al 65535, pero nos enfocaremos en los más comunes</div>
+        </div>
+        
+        <div class="input-container">
+            <input type="number" id="valorUsuario" min="1" max="65535" class="container__input" placeholder="????">
+        </div>
+        
+        <div id="resultado" class="resultado">
+            Esperando entrada del usuario...
+        </div>
+        
+        <div class="container__botones">
+            <button onclick="verificarIntento();" class="container__boton">🔍 ESCANEAR</button>
+            <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>🔄 NUEVO HACK</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
